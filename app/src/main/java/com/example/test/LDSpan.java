@@ -55,6 +55,7 @@ public class LDSpan extends DynamicDrawableSpan {
         paint.setAntiAlias(true);
         //设置字体画笔的颜色
         paint.setColor(context.getResources().getColor(R.color.color_blue));
+        //设置字体的大小
         paint.setTextSize(50);
         Rect rect = new Rect();
         paint.getTextBounds(name, 0, name.length(), rect);

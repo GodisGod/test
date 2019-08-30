@@ -1,46 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <EditText
+    <com.example.test.AtEdittext
             android:id="@+id/list_item"
             android:layout_width="match_parent"
-            android:padding="14dp"
-            android:layout_height="200dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
-    />
+            android:layout_margin="20dp"
+            android:background="#50af"
+            android:focusableInTouchMode="true"
+            android:padding="14dp" />
+
+    <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
     <Button
             android:id="@+id/sa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="点击测试上传到服务器的id"
             android:layout_gravity="center"
-    />
-    <Button
-            android:text="清楚所有span"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/btn_clear_spans"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    <EditText
-            android:id="@+id/et_start"
-            android:layout_width="100dp"
-            android:hint="start"
-            android:inputType="number"
-            android:layout_height="wrap_content"/>
-    <EditText
-            android:id="@+id/et_end"
-            android:layout_width="100dp"
-            android:hint="end"
-            android:inputType="number"
-            android:layout_height="wrap_content"/>
-    <Button
-            android:text="添加span"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/btn_add_span"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_marginTop="10dp"
+            android:text="点击测试上传到服务器的id" />
+
 </LinearLayout>

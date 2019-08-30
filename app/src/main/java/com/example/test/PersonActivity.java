@@ -3,6 +3,7 @@ package com.example.test;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -11,10 +12,12 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.test.AtEdittext.KEY_CID;
+import static com.example.test.AtEdittext.KEY_NAME;
+
 public class PersonActivity extends Activity {
     private String mIniSelectedCids;
-    public static final String KEY_CID = "cid";
-    public static final String KEY_NAME = "name";
+
     public static final String KEY_SELECTED = "selected";
     private ListView mListView;
     private PersonAdapter mAdapter;
@@ -35,17 +38,12 @@ public class PersonActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 Person person = (Person) parent.getItemAtPosition(position);
-//				if (mIniSelectedCids.contains(person.getId())) {
-//					Intent intent = new Intent();
-//					setResult(RESULT_CANCELED, intent);
-//					finish();
-//				}else {
                 Intent intent = new Intent();
                 intent.putExtra(KEY_CID, person.getId());
                 intent.putExtra(KEY_NAME, person.getName());
+                Log.i("LHD", "person.getId() = " + person.getId() + "  person.getName() = " + person.getName());
                 setResult(RESULT_OK, intent);
                 finish();
-//				}
             }
         });
     }
